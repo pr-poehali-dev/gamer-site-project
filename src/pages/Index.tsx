@@ -16,10 +16,10 @@ const Index = () => {
   });
 
   useEffect(() => {
-    document.title = 'Игровые Компьютеры | Купить Gaming PC в Москве | yebu.ru';
+    document.title = 'Игровые Компьютеры | Купить Gaming PC в Хабаровске | yebu.ru';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '🚀 Мощные игровые компьютеры от GalaxyPCs ⭐ RTX 4080/4090 ⭐ Intel i7/i9 ⭐ Быстрая сборка и доставка по Москве ⭐ Гарантия качества ⭐ Заказать в 1 клик!');
+      metaDescription.setAttribute('content', '🚀 Мощные игровые компьютеры от GalaxyPCs ⭐ RTX 4080/4090 ⭐ Intel i7/i9 ⭐ Быстрая сборка и доставка по Хабаровску ⭐ Гарантия качества ⭐ Заказать в 1 клик!');
     }
   }, []);
 
@@ -205,7 +205,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="MapPin" className="h-5 w-5 text-primary" />
-                  <span>Москва, ул. Космическая, 42</span>
+                  <span>Хабаровск, ул. Космическая, 42</span>
                 </div>
               </CardContent>
             </Card>
