@@ -78,8 +78,8 @@ const Index = () => {
               onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
-              <Icon name="Rocket" className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <Icon name="Rocket" className="h-8 w-8 text-primary animate-pulse" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient-shift bg-clip-text text-transparent">
                 GalaxyPCs
               </span>
             </button>
@@ -153,7 +153,7 @@ const Index = () => {
             <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
               Космические технологии
             </Badge>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient-shift bg-clip-text text-transparent">
               ИГРОВЫЕ
               <br />
               КОМПЬЮТЕРЫ
@@ -341,8 +341,8 @@ const Index = () => {
             onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
             className="flex items-center justify-center space-x-2 mb-4 hover:opacity-80 transition-opacity mx-auto"
           >
-            <Icon name="Rocket" className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <Icon name="Rocket" className="h-6 w-6 text-primary animate-pulse" />
+            <span className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient-shift bg-clip-text text-transparent">
               GalaxyPCs
             </span>
           </button>
