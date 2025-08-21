@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -14,6 +14,14 @@ const Index = () => {
     phone: '',
     message: ''
   });
+
+  useEffect(() => {
+    document.title = 'Игровые Компьютеры | Купить Gaming PC в Москве | yebu.ru';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', '🚀 Мощные игровые компьютеры от GalaxyPCs ⭐ RTX 4080/4090 ⭐ Intel i7/i9 ⭐ Быстрая сборка и доставка по Москве ⭐ Гарантия качества ⭐ Заказать в 1 клик!');
+    }
+  }, []);
 
   const products = [
     {
@@ -97,15 +105,15 @@ const Index = () => {
               Космические технологии
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              GAMING
+              ИГРОВЫЕ
               <br />
-              COMPUTERS
+              КОМПЬЮТЕРЫ
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl mx-auto">
               Откройте врата в новую вселенную игр с нашими космическими игровыми станциями
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90" onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}>
                 <Icon name="Zap" className="mr-2 h-5 w-5" />
                 Выбрать компьютер
               </Button>
