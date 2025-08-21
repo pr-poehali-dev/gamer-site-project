@@ -74,18 +74,67 @@ const Index = () => {
       <header className="border-b border-border backdrop-blur-sm sticky top-0 z-50 bg-background/90">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <button 
+              onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+            >
               <Icon name="Rocket" className="h-8 w-8 text-primary" />
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 GalaxyPCs
               </span>
+            </button>
+            <div className="flex md:hidden">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => {
+                  const menu = document.getElementById('mobile-menu');
+                  if (menu) {
+                    menu.classList.toggle('hidden');
+                  }
+                }}
+              >
+                <Icon name="Menu" className="h-6 w-6" />
+              </Button>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#home" className="hover:text-primary transition-colors">Главная</a>
-              <a href="#catalog" className="hover:text-primary transition-colors">Каталог</a>
-              <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
+              <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">Главная</button>
+              <button onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">Каталог</button>
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">Контакты</button>
             </div>
           </nav>
+        </div>
+        {/* Mobile Menu */}
+        <div id="mobile-menu" className="hidden md:hidden bg-background/95 backdrop-blur-sm border-b border-border">
+          <div className="container mx-auto px-4 py-4 space-y-3">
+            <button 
+              onClick={() => {
+                document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('mobile-menu')?.classList.add('hidden');
+              }} 
+              className="block w-full text-left hover:text-primary transition-colors py-2"
+            >
+              Главная
+            </button>
+            <button 
+              onClick={() => {
+                document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('mobile-menu')?.classList.add('hidden');
+              }} 
+              className="block w-full text-left hover:text-primary transition-colors py-2"
+            >
+              Каталог
+            </button>
+            <button 
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('mobile-menu')?.classList.add('hidden');
+              }} 
+              className="block w-full text-left hover:text-primary transition-colors py-2"
+            >
+              Контакты
+            </button>
+          </div>
         </div>
       </header>
 
@@ -104,7 +153,7 @@ const Index = () => {
             <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
               Космические технологии
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               ИГРОВЫЕ
               <br />
               КОМПЬЮТЕРЫ
@@ -117,7 +166,12 @@ const Index = () => {
                 <Icon name="Zap" className="mr-2 h-5 w-5" />
                 Выбрать компьютер
               </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary text-primary hover:bg-primary/10"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Icon name="Phone" className="mr-2 h-5 w-5" />
                 Консультация
               </Button>
@@ -283,12 +337,15 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 bg-card/20">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
+          <button 
+            onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+            className="flex items-center justify-center space-x-2 mb-4 hover:opacity-80 transition-opacity mx-auto"
+          >
             <Icon name="Rocket" className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               GalaxyPCs
             </span>
-          </div>
+          </button>
           <p className="text-muted-foreground">
             © 2024 GalaxyPCs. Покоряем игровые вселенные вместе 🚀
           </p>
